@@ -1,0 +1,8 @@
+package com.bean;
+
+public class Car {
+private String basicCar;
+private String LuxuryCar;
+private String Limousine;
+
+}

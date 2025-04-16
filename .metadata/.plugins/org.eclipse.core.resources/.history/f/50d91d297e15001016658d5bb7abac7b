@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Welcome to Ride Booking Application!</h2>
+<form action="#" th:action="@{/ride-booking}" method="post" th:object="${booking}">
+	
+	<select th:field="*{carOption}">
+    <option value="0">select your ride</option>
+    <option th:each=" ${carOption}" th:value="${carOption}" th:text="${carOption}"></option>
+	</select>
+	<br/>
+	
+	<label>Pick up Location</label>
+	<input type="text" name="pickup" th:field="*{pickup}"/><br/>
+	
+	<label>Drop off Location</label>
+	<input type="text" name="dropoff" th:field="*{dropoff}"/><br/>
+	
+
+	<input type="submit" value="Book your Ride"/>
+	<input type="reset" value="reset"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+package com.bean;
+
+public class Car {
+@Column (name = "carid")
+private int carId;
+@Column (name = "cartype")
+private String carType;
+
+
+}
