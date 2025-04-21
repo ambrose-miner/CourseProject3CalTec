@@ -22,14 +22,14 @@ public class FareService {
 		}catch(Exception e) {
 			System.err.println(e);
 			FareRepository.save(cb);
-			return "Car Fare Information stored";
+			return "Trip Information stored";
 		}
 		
 	}
 	
-	public float findFare(String pickup, String dropoff) {
+	public float findPrice(String pickup, String dropoff) {
 		try {
-			return FareRepository.findFare(pickup, dropoff);
+			return FareRepository.findPrice(pickup, dropoff);
 		} catch (Exception e) {
 			System.err.println(e);
 			return -1;

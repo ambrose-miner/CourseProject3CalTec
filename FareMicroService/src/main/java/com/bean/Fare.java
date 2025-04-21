@@ -35,11 +35,11 @@ public String getDropoff() {
 public void setDropoff(String dropoff) {
 	this.dropoff = dropoff;
 }
-public float getFare() {
+public float getPrice() {
 	return price;
 }
-public void setFare(float fare) {
-	this.price = fare;
+public void setPrice(float price) {
+	this.price = price;
 }
 
 

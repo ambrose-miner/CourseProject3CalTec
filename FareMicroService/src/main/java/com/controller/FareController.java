@@ -13,7 +13,7 @@ import com.bean.Fare;
 import com.service.FareService;
 
 @RestController
-@RequestMapping("Fare")    // http://localhost:8282/cabfare/*
+@RequestMapping("Price")    // http://localhost:8282/cabfare/*
 public class FareController {
 
 	@Autowired
@@ -21,15 +21,15 @@ public class FareController {
 	// http://localhost:8282/cabfare/create
 	
 	@PostMapping(value = "create",consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String storeFareInfo(@RequestBody Fare Fare) {
-		return FareService.storeFareInfo(Fare);
+	public String storeFareInfo(@RequestBody Fare Price) {
+		return FareService.storeFareInfo(Price);
 	}
 	
 	// http://localhost:8282/cabfare/findFare/A/B
 	
-	@GetMapping(value = "findFare/{pickup}/{dropoff}")
-	public float findFare(@PathVariable String pickup, @PathVariable String dropoff) {
+	@GetMapping(value = "findPrice/{pickup}/{dropoff}")
+	public float findPrice(@PathVariable String pickup, @PathVariable String dropoff) {
 		System.out.println(pickup +" "+dropoff);
-		return FareService.findFare(pickup, dropoff);
+		return FareService.findPrice(pickup, dropoff);
 	}
 }

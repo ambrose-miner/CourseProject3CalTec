@@ -31,7 +31,7 @@ public class RideController {
 		mm.addAttribute("ride", r);
 		return "ride-booking";
 	}
-//	@PostMapping(value = "/populateDropDownList", method = RequestMethod.GET) 
+//	@GetMapping(value = "/populateDropDownList", method = RequestMethod.GET) 
 //	public String populateList(Model model) {
 //	    List<String> options = new ArrayList<String>();
 //	    options.add("Basic Car");
@@ -39,6 +39,6 @@ public class RideController {
 //	  	options.add("Limousine ");
 //	    model.addAttribute("options", options);
 //	    return "dropDownList/dropDownList.html";
-//	}
+//	} Prototype method for a populating drop down list allowing the easy addition of cars to choose from.
 }
 
