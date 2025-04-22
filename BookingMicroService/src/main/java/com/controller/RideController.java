@@ -16,7 +16,7 @@ import com.bean.Ride;
 @Controller
 public class RideController {
 	@Autowired
-	RideService RideService;
+	RideService rideService;
 	@GetMapping(value = "/")
 	public String bookingLandingPage(Model mm, Ride r) {
 		mm.addAttribute("ride", r);

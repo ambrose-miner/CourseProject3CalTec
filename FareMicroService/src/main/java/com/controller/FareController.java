@@ -13,7 +13,7 @@ import com.bean.Fare;
 import com.service.FareService;
 
 @RestController
-@RequestMapping("Price")    // http://localhost:8282/cabfare/*
+@RequestMapping("Fare")    // http://localhost:8282/cabfare/*
 public class FareController {
 
 	@Autowired

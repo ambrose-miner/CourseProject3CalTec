@@ -16,12 +16,6 @@ import org.springframework.web.client.RestTemplate;
 	
 public class BookingMicroServiceApplication {
 	
-	
-	@Bean
-	public RestTemplate restTemplate() {
-	return new RestTemplate();
-	
-	}
 	@LoadBalanced
 	public static void main(String[] args) {
 		SpringApplication.run(BookingMicroServiceApplication.class, args);
