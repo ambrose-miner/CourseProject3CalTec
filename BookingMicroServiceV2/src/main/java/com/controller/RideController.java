@@ -22,7 +22,7 @@ public class RideController {
 	public String bookRide(Model mm, Ride r) {
 		
 		System.out.println(r);
-		mm.addAttribute("msg", "Simple testing message");
+		mm.addAttribute("msg", "Test message");
 		mm.addAttribute("ride", r);
 		return "ride-booking";
 	}

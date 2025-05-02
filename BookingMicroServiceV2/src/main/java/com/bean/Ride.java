@@ -18,7 +18,14 @@ public class Ride {
 	private String username;
 	private String pickup;
 	private String dropoff;
+	private int carvalue;
 	
+	public int getCarvalue() {
+		return carvalue;
+	}
+	public void setCarvalue(int carvalue) {
+		this.carvalue = carvalue;
+	}
 	public int getRideId() {
 		return rideid;
 	}

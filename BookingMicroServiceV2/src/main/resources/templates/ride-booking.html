@@ -9,12 +9,6 @@
 <h2>Welcome to Ride Booking Application!</h2>
 
 <form action="#" th:action="@{/bookRide}" method="post" th:object="${ride}">
-	<label>Choose Car Type</label>
-	<select th:field="*{car}">
-		<option th:value="'Basic'" th:text="Basic Car"></option>
-		<option th:value="'Luxury'" th:text="Luxury Car"></option>
-		<option th:value="'Limo'" th:text="Limousine"></option>
-	</select>
 	
 	<label>Pick up Location</label>
 	<input type="text" name="pickup" th:field="*{pickup}"/><br/>
