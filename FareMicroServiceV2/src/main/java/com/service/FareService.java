@@ -27,9 +27,9 @@ public class FareService {
 		
 	}
 	
-	public float findPrice(String pickup, String dropoff) {
+	public float findFare(String pickup, String dropoff) {
 		try {
-			return FareRepository.findPrice(pickup, dropoff);
+			return FareRepository.findFare(pickup, dropoff);
 		} catch (Exception e) {
 			System.err.println(e);
 			return -1;

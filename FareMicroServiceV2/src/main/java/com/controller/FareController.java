@@ -20,12 +20,12 @@ public class FareController {
 	FareService FareService;
 	
 	@PostMapping(value = "create",consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String storeFareInfo(@RequestBody Fare Price) {
-		return FareService.storeFareInfo(Price);
+	public String storeFareInfo(@RequestBody Fare fare) {
+		return FareService.storeFareInfo(fare);
 	}
-	@GetMapping(value = "findPrice/{pickup}/{dropoff}")
-	public float findPrice(@PathVariable String pickup, @PathVariable String dropoff) {
+	@GetMapping(value = "findFare/{pickup}/{dropoff}")
+	public float findFare(@PathVariable String pickup, @PathVariable String dropoff) {
 		System.out.println(pickup +" "+dropoff);
-		return FareService.findPrice(pickup, dropoff);
+		return FareService.findFare(pickup, dropoff);
 	}
 }
