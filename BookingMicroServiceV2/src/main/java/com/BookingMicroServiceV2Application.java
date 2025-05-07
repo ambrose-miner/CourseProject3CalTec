@@ -8,10 +8,10 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = "com")
-@EnableDiscoveryClient
 @EntityScan(basePackages = "com.bean")	
 @EnableJpaRepositories(basePackages = "com.repository")
-	
+@EnableDiscoveryClient
+
 public class BookingMicroServiceV2Application {
 	
 	
