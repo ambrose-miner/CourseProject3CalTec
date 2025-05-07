@@ -32,11 +32,18 @@ public class Ride {
 	public void setRideId(int rideId) {
 		this.rideid = rideId;
 	}
-	public String getUserName() {
+	
+	public int getRideid() {
+		return rideid;
+	}
+	public void setRideid(int rideid) {
+		this.rideid = rideid;
+	}
+	public String getUsername() {
 		return username;
 	}
-	public void setUserName(String userName) {
-		this.username = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getPickup() {
 		return pickup;

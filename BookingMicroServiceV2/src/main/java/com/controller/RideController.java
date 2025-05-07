@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.service.RideService;
 import com.bean.Ride;
 
-@RestController //Changed from @Controller
+@Controller
 public class RideController {
 	@Autowired
 	RideService rideService;
 	@GetMapping(value = "/")
 	public String bookingLandingPage(Model mm, Ride r) {
+		//System.out.println("I came here");
 		mm.addAttribute("ride", r);
 		return "ride-booking";
 	}
