@@ -24,7 +24,7 @@ public class FareController {
 		return FareService.storeFareInfo(fare);
 	}
 	@GetMapping(value = "findFare/{pickup}/{dropoff}")
-	public float findFare(@PathVariable String pickup, @PathVariable String dropoff) {
+	public float findFareInfo(@PathVariable String pickup, @PathVariable String dropoff) {
 		System.out.println(pickup +" "+dropoff);
 		return FareService.findFare(pickup, dropoff);
 	}

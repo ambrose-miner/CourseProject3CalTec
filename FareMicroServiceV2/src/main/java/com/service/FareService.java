@@ -19,13 +19,13 @@ public class FareService {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	public String storeFareInfo(Fare cb) {
+	public String storeFareInfo(Fare fI) {
 		try {
-		FareRepository.findPickupAndDropoff(cb.getPickup(), cb.getDropoff());
+		FareRepository.findPickupAndDropoff(fI.getPickup(), fI.getDropoff());
 		return "This Fare Alreay Exists";
 		}catch(Exception e) {
 			System.err.println(e);
-			FareRepository.save(cb);
+			FareRepository.save(fI);
 			return "Fare Information stored";
 		}
 		

@@ -10,6 +10,9 @@
 
 <form action="#" th:action="@{/bookRide}" method="post" th:object="${ride}">
 	
+	<label>User Name</label>
+	<input type="text" name="username" th:field="*{username}"/><br/>
+	
 	<label>Pick up Location</label>
 	<input type="text" name="pickup" th:field="*{pickup}"/><br/>
 	
@@ -19,6 +22,6 @@
 	<input type="submit" value="Book your Ride"/>
 	<input type="reset" value="reset"/>
 </form>
-<h2> Your ride will cost</h2>
+
 </body>
 </html>
