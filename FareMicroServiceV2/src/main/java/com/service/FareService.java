@@ -39,7 +39,7 @@ public class FareService {
 			return -1;
 		}
 	}
-//	public String showFare(Ride ride) {
+//	public int showRideId(Ride ride) {
 //		Optional<Ride> result = JpaRepository.findById(ride.getRideId());
 //		if(result.isPresent()) {
 //			Ride activeRide = result.get();

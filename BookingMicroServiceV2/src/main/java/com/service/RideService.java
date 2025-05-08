@@ -11,18 +11,20 @@ import com.bean.Ride;
 
 @Service
 public class RideService {
-@Autowired RideRepository RideRepository;
+
+@Autowired
+RideRepository RideRepository;
 @Autowired
 RestTemplate restTemplate;
 
-	public String storeRideInfo(Ride rI) {
-		try {
-		RideRepository.findRideDistance(rI.getPickup(), rI.getDropoff());
-		return "This Ride Already Exists";
-		}catch(Exception e) {
-			System.err.println(e);
+	public String bookRide(Ride rI) {
+		Optional<Ride> result = RideRepository.findById(rI.getRideId());
+		if(result.isPresent()) {
+		return "This Ride is Already Booked";
+		
+		}else {
 			RideRepository.save(rI);
-			return "Fare Information stored";
+			return "Ride Information stored";
 		}
 	}
 }

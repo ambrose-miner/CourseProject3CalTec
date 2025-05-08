@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.service.RideService;
 import com.bean.Ride;
@@ -14,6 +15,9 @@ import com.bean.Ride;
 public class RideController {
 	@Autowired
 	RideService rideService;
+	@Autowired
+	RestTemplate restTemplate;
+	
 	@GetMapping(value = "/")
 	public String bookingLandingPage(Model mm, Ride r) {
 		//System.out.println("I came here");
@@ -26,12 +30,7 @@ public class RideController {
 		 mm.addAttribute("pickup");
 		 mm.addAttribute("dropoff");
 		 mm.addAttribute("username");
-//		System.out.println(r);
-//		mm.addAttribute("msg", "Test message");
-//		mm.addAttribute("ride", r);
 		return "ride-booking";
 	}
-//	public String createBooking(@ModelAttribute Booking booking, String email) {
-//		System.out.println(booking.toString());
-//		return bookingService.createBooking(booking, email);
+	
 }

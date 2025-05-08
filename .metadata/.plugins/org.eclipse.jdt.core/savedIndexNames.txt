@@ -173,7 +173,6 @@ INDEX VERSION 1.134+C:\Projects\eclipse-workspace-course3project\.metadata\.plug
 1620768149.index
 3413725848.index
 3298289660.index
-2313468621.index
 3004258646.index
 2314479525.index
 1183535868.index
