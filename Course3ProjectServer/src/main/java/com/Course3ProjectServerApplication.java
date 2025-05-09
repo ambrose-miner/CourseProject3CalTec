@@ -10,6 +10,7 @@ public class Course3ProjectServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Course3ProjectServerApplication.class, args);
+		System.out.println("server up on port 8761");
 	}
 
 }

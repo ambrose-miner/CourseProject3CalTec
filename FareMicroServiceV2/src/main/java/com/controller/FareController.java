@@ -12,17 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bean.Fare;
 import com.service.FareService;
 
-@RestController
+@RestController //test these end points with postman
 @RequestMapping("Fare")
 public class FareController {
 
 	@Autowired
 	FareService FareService;
 	
-	@PostMapping(value = "create",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "create",consumes = MediaType.APPLICATION_JSON_VALUE)  
 	public String storeFareInfo(@RequestBody Fare fare) {
 		return FareService.storeFareInfo(fare);
 	}
+	
 	@GetMapping(value = "findFare/{pickup}/{dropoff}")
 	public float findFare(@PathVariable String pickup, @PathVariable String dropoff) {
 		System.out.println(pickup +" "+dropoff);

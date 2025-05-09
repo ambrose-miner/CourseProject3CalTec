@@ -14,14 +14,22 @@ public class Fare {
 private int rideid;
 private String pickup;
 private String dropoff;
-private float price;
+private int price;
 
-public int getRideId() {
+
+public int getPrice() {
+	return price;
+}
+public void setPrice(int price) {
+	this.price = price;
+}
+public int getRideid() {
 	return rideid;
 }
-public void setRideId(int rideId) {
-	rideid = rideId;
+public void setRideid(int rideid) {
+	this.rideid = rideid;
 }
+
 public String getPickup() {
 	return pickup;
 }
@@ -33,12 +41,6 @@ public String getDropoff() {
 }
 public void setDropoff(String dropoff) {
 	this.dropoff = dropoff;
-}
-public float getPrice() {
-	return price;
-}
-public void setPrice(float price) {
-	this.price = price;
 }
 
 

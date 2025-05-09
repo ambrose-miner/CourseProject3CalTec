@@ -18,9 +18,16 @@ public class Ride {
 	private String username;
 	private String pickup;
 	private String dropoff;
+	private float price;
 	//private int carvalue;
 	
-//	public int getCarvalue() {
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	//	public int getCarvalue() {
 //		return carvalue;
 //	}
 //	public void setCarvalue(int carvalue) {

@@ -11,12 +11,10 @@ import org.springframework.web.client.RestTemplate;
 import com.service.RideService;
 import com.bean.Ride;
 
-@Controller
+@Controller //view must be in this micro service project
 public class RideController {
 	@Autowired
 	RideService rideService;
-	@Autowired
-	RestTemplate restTemplate;
 	
 	@GetMapping(value = "/")
 	public String bookingLandingPage(Model mm, Ride r) {
@@ -30,6 +28,9 @@ public class RideController {
 		 mm.addAttribute("pickup");
 		 mm.addAttribute("dropoff");
 		 mm.addAttribute("username");
+		 System.out.println("Ride booked");
+		 //String result = bookRide.
+		 mm.addAttribute("msg", "Your Ride Is Booked");
 		return "ride-booking";
 	}
 	
