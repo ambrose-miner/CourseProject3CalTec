@@ -15,20 +15,25 @@ public class FareService {
 
 	@Autowired
 	FareRepository FareRepository;
-//	@Autowired
-//	RestTemplate restTemplate;
+
 	
 	public String storeFareInfo(Fare fI) {
+		int X = -1;
 		try {
-		FareRepository.findPickupAndDropoff(fI.getPickup(), fI.getDropoff());
-		return "This Fare Alreay Exists";
-		}catch(Exception e) {
-			System.err.println(e);
+			X = FareRepository.findPickupAndDropoff(fI.getPickup(), fI.getDropoff());
+		}catch(Exception e) {} //nothing needs to happen here!
+			if (X > 0) {
+			return "This Fare Alreay Exists";
+				}else {					
+		try {
 			FareRepository.save(fI);
 			return "Fare Information stored";
+			}catch(Exception e) {
+			System.err.println(e);
+			return "Database Error";
+			}
 		}
 	}
-
 	
 	public float findFare(String pickup, String dropoff) {
 		try {
@@ -38,13 +43,5 @@ public class FareService {
 			return -1;
 		}
 	}
-//	public int showRideId(Ride ride) {
-//		Optional<Ride> result = JpaRepository.findById(ride.getRideId());
-//		if(result.isPresent()) {
-//			Ride activeRide = result.get();
-//			float activePrice = activeRide.getPrice();
-//			return "Your ride will cost"+price;
-//		}else {
-//			return "Sorry ride failed, Please try again";
-//		}
+
 }

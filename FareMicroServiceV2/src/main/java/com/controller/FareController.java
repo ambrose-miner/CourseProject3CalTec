@@ -13,7 +13,7 @@ import com.bean.Fare;
 import com.service.FareService;
 
 @RestController //test these end points with postman
-@RequestMapping("Fare")
+@RequestMapping("fare")
 public class FareController {
 
 	@Autowired
