@@ -19,9 +19,12 @@
 	<label>Drop off Location</label>
 	<input type="text" name="dropoff" th:field="*{dropoff}"/><br/>
 	
-	<input type="submit" value="Book your Ride"/>
-	<input type="reset" value="reset"/>
+	<p><input type="submit"  value="Book your Ride"/></p>
+	
+	<p><input type="reset" value="Change your Ride"/></p>
 </form>
-
+<h2 th:text="${msg1} + ${ride.username}"></h2>
+<br>
+<h2 th:text="${msg2} + ${ride.price}"></h2>
 </body>
 </html>

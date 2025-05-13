@@ -26,11 +26,12 @@ public class RideController {
 	@PostMapping(value = "/bookRide")
 	public String bookRide(Model mm, Ride r) {
 		 //mm.addAttribute("pickup"); Stores values with out these lines...
-		 //mm.addAttribute("dropoff");
+		 //mm.addAttribute("dropoff"); Only used for dynamic values....?
 		 //mm.addAttribute("username");
 		 System.out.println("Ride booked");
 		 rideService.bookRide(r);
-		 mm.addAttribute("msg", "Your Ride Is Booked");
+		 mm.addAttribute("msg1", "Thank you " );
+		 mm.addAttribute("msg2", "Your ride has been booked and the Fare will be ");
 		return "ride-booking";
 	}
 	

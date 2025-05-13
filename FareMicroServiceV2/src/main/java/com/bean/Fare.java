@@ -11,25 +11,24 @@ import jakarta.persistence.Id;
 public class Fare {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int rideid;
+private int fareid;
 private String pickup;
 private String dropoff;
-private int price;
+private float price;
 
 
-public int getPrice() {
+public float getPrice() {
 	return price;
 }
-public void setPrice(int price) {
+public void setPrice(float price) {
 	this.price = price;
 }
-public int getRideid() {
-	return rideid;
+public int getFareid() {
+	return fareid;
 }
-public void setRideid(int rideid) {
-	this.rideid = rideid;
+public void setFareid(int fareid) {
+	this.fareid = fareid;
 }
-
 public String getPickup() {
 	return pickup;
 }

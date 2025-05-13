@@ -43,5 +43,11 @@ public class FareService {
 			return -1;
 		}
 	}
-
+	public void deleteFareRout(String pickup, String dropoff) {
+		try {
+			FareRepository.deleatePickupAndDropoff(pickup, dropoff);
+		}catch (Exception e) {
+			System.err.println(e);
+		}
+	}
 }
