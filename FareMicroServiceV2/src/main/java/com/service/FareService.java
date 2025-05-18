@@ -43,11 +43,20 @@ public class FareService {
 			return -1;
 		}
 	}
-	public void deleteFareRout(String pickup, String dropoff) {
+	public void deleteFareRout(String pickup, String dropoff) { //tested compiles but does not function...?
 		try {
 			FareRepository.deleatePickupAndDropoff(pickup, dropoff);
 		}catch (Exception e) {
 			System.err.println(e);
+		}
+	}
+
+	public String displayFareRout(fareid Fid) { //problem with fareid...?
+		try {
+			FareRepository.displayFareRout(Fid.getPickup(), (Fid.getDropoff(), Fid.getPrice());
+		}catch (Exception e) {
+			System.err.println(e);
+		return "Rout info for Id:" +fareid +" " +"Pickup: " +pickup +"Dropoff: " +dropoff +"Price: " +price); //does not like any of these variables
 		}
 	}
 }

@@ -31,8 +31,13 @@ public class FareController {
 		return FareService.findFare(pickup, dropoff);
 	}
 	@DeleteMapping(value = "deleteFareRout/{pickup}/{dropoff}")
-	public void deleteFareRout(@PathVariable String pickup, @PathVariable String dropoff) {
+	public void deleteFareRout(@PathVariable String pickup, @PathVariable String dropoff) { // will compile but not produce result.
 		System.out.println(pickup +" "+dropoff +" route deleted");
-		FareService.deleteFareRout(pickup, dropoff);
+		FareService.deleteFareRout(pickup, dropoff); // no return needed on a delete method
+	}
+	@GetMapping(value = "displayFareRout/{fareid}")
+	public int displayFareRout(@PathVariable int fareid) {
+		System.out.println("Fare info for Id number" +" "+fareid);
+		return FareService.displayFareRout(fareid);
 	}
 }
