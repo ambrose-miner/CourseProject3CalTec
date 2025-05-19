@@ -45,7 +45,7 @@ public class FareService {
 	}
 	public void deleteFareRout(String pickup, String dropoff) { //tested compiles but does not function...?
 		try {
-			FareRepository.deleatePickupAndDropoff(pickup, dropoff);
+			FareRepository.deletePickupAndDropoff(pickup, dropoff);
 		}catch (Exception e) {
 			System.err.println(e);
 		}

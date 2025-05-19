@@ -24,7 +24,7 @@ public interface FareRepository extends JpaRepository<Fare, Integer>{
 	@Modifying
 	@Transactional
 	@Query("delete from Fare cf where cf.pickup = :pickupA and cf.dropoff = :dropoffB")
-	public void deleatePickupAndDropoff(@Param("pickupA") String pickup, @Param("dropoffB") String dropoff);
+	public void deletePickupAndDropoff(@Param("pickupA") String pickup, @Param("dropoffB") String dropoff);
 	//test above Query... Used to delete fare routes from the table with out having to know the fareid.
 	
 	Optional<Fare> displayFareRout(); //should not need to pass fareid its @Id of @Entity class 
